@@ -84,7 +84,7 @@ localparam [31:0]k[0:63] =
 	     begin
 	       if(j!=64 && start==1)
 	         begin
-	           CapSigma0=({a_in[1:0],e_in[31:2]} ^ {e_in[12:0],e_in[31:13]} ^ {e_in[21:0],e_in[31:22]});
+	           CapSigma0=({a_in[1:0],a_in[31:2]} ^ {a_in[12:0],a_in[31:13]} ^ {a_in[21:0],a_in[31:22]});
 	           CapSigma1=({e_in[5:0],e_in[31:6]} ^ {e_in[10:0],e_in[31:11]} ^ {e_in[24:0],e_in[31:25]});
 	           choice=(e_in & f_in) ^ ((~e_in) & g_in);
 	           majority=(a_in & b_in) ^ (a_in & c_in) ^ (b_in & c_in);
